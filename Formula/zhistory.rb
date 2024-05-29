@@ -2,7 +2,7 @@ class Zhistory < Formula
   desc "Command-line analysis tool for zsh history"
   homepage "https://github.com/itsKarad/ZHistory"
   url "https://github.com/itsKarad/ZHistory/blob/hitarth/releases/zhistory.tar.gz"
-  sha256 "b2e9792d38d101ea8c2ed28e8fc6f73b355c5d3fd8c814c245a13bbef9b4dbf4"
+  sha256 "acba3a66b4400dfe968bb355c5b07749fdd48a4e352a8f2e4d0f017cc65f2055"
   license "MIT"
   version "0.1.0"
 
