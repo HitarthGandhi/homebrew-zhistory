@@ -1,17 +1,18 @@
 class Zhistory < Formula
   desc "Command-line analysis tool for zsh history"
   homepage "https://github.com/itsKarad/ZHistory"
-  url "https://github.com/itsKarad/ZHistory/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "1093b009dd9ca9beca551c1dc33e0924f1498247066262a7f5c8d6c7d022e8c9"
+  url "https://github.com/itsKarad/ZHistory/blob/hitarth/releases/zhistory.tar.gz"
+  sha256 "b2e9792d38d101ea8c2ed28e8fc6f73b355c5d3fd8c814c245a13bbef9b4dbf4"
   license "MIT"
 
   depends_on "rust" => :build
 
   def install
-    system "cargo", "install", *std_cargo_args
+    bin.install "zhistory"
   end
 
   test do
-    system "#{bin}/zhistory", "--version"
+    # system "#{bin}/zhistory", "--version"
+    assert_match "zhistory v1.0.0", shell_output("#{bin}/zhistory --version")
   end
 end
